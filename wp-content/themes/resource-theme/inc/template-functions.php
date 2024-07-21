@@ -109,7 +109,7 @@ function load_posts_ajax_handler()
 				else{?>
 				<div class="post-thumbnail">
 						<a href="<?php the_permalink(); ?>">
-							<img src="http://localhost:88/wordpress_assignment/wp-content/uploads/2024/07/default_image.png" alt="resource default image">
+							<img src="http://resourcetask.infinityfreeapp.com/wp-content/uploads/2024/07/default_image.png" alt="resource default image">
 						</a>
 					</div>
 
