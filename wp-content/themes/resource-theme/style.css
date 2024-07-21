@@ -13,20 +13,68 @@ Text Domain: resource-theme
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 /* Container styling */
+
+
+/* Content area */
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+/* Container styling */
 #container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
     border-radius: 5px;
 }
 
 /* Content area */
 #content {
-    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.filter-main {
+    /* flex: 1 0 calc(100% - 300px); Adjust width as needed */
+    margin-right: 20px; /* Adjust margin between columns */
+    background-color: #a8d1f6;
+    
+
+}
+
+.filter-sub {
+    flex: 2 0 calc(320px); 
+}
+
+.post-thumbnail {
+    height: 170px; /* Set your desired fixed height */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.post-thumbnail img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below inline images */
+}
+
+#resource-container{
+    display: flex;
+    flex-flow: wrap;
+    column-gap: 25px;
+    border: 1px solid rgb(153, 153, 241);
+}
 /* Taxonomy filters */
 .taxonomy-filter {
     margin-bottom: 10px;
@@ -38,7 +86,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 /* Search container */
 #search-container {
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 #search-form {
@@ -52,6 +100,19 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
     font-size: 14px;
     border: 1px solid #ddd;
     border-radius: 3px;
+}
+
+#reset-filters {
+    background-color: #ed0b0b;
+    color: #ffffff;
+    border: 1px solid #4e0909;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#reset-filters:hover {
+    background-color: #2b0808;
 }
 
 #search-submit {
@@ -71,11 +132,13 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 /* Resource posts */
 .post {
-    margin-bottom: 20px;
-    padding: 15px;
+    margin: 10px 0px 20px 10px;
+    padding: 5px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
+    width: 30%;
+    
 }
 
 .post h2 {
@@ -91,6 +154,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 /* Load more button */
 #load-more {
     text-align: center;
+    margin-top: 20px;
 }
 
 #load-more-button {
@@ -106,26 +170,20 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 #load-more-button:hover {
     background-color: #218838;
 }
-/* Styling for no post message */
-.no-post-message {
-    padding: 20px;
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    border-radius: 5px;
+
+div#taxonomy-filters {
+    margin: 20px;
+}
+
+div#reset-filter {
+    margin: 10px;
+}
+
+.header-footer{
     text-align: center;
-    margin-bottom: 20px;
+    height: 50px;
 }
-
-#reset-filters {
-    background-color: #ed0b0b;
-    color: #ffffff;
-    border: 1px solid #4e0909;
-    padding: 8px 16px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-#reset-filters:hover {
-    background-color: #2b0808;
+.filter-title{
+    text-align: center;
+    margin: 10px;
 }
